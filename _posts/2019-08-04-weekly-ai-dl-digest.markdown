@@ -8,7 +8,7 @@ published: true
 
 ### Facebook Video Pose 3D 
 
-[Facebook Video Pose 3D][facebookpose]
+### [Facebook Video Pose 3D][facebookpose]
 
 ### [semisupervised,google,generalization] Google AI Blog  
 
