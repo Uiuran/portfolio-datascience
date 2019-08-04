@@ -6,7 +6,7 @@ comments: true
 published: true
 ---
 
-### - [Facebook Video Pose 3D][facebookpose]
+- ### [Facebook Video Pose 3D][facebookpose]
 ### - [multilingual-universal-sentence-encoder][googleai2]
 ### - [predicting-generalization-gap-in-deep][googleai2]
 ### - [advancing-semi-supervised-learning-with][googleai2]
