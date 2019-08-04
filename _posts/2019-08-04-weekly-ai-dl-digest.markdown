@@ -6,67 +6,23 @@ comments: true
 published: true
 ---
 
-### Facebook Video Pose 3D 
-
-### [Facebook Video Pose 3D][facebookpose]
-
-### [semisupervised,google,generalization] Google AI Blog  
-
-[multilingual-universal-sentence-encoder][googleai2]
-[predicting-generalization-gap-in-deep][googleai2]
-[advancing-semi-supervised-learning-with][googleai2]
-
-### [bert] Multilingual BERT Paper
-
-[How Multilingual is Multilingual BERT][bertpaper]
-
-### [language] Hard to Machine Learn Languages Paper
-
-[What Kind of Language is Hard to Language-Model][hardlang]
-
-### [graph] From Graph Representation to Logics
-
-[Generating Logical Forms from Graph Representations of Text and Entities][logics] 
-
-### [information] Meaning to Form
-
-[Meaning to Form: Measuring Systematicity as Information][meaningtoform]
-
-### [hinton] Turing Lectures
-
-[Geoffrey Hinton Master Class][turinghinton]
-
-### [information,danijar] Hierarchical Learning Information Flow - Danijar Blog
-
-[Danijar AI BLOG][researchhierarchicak]
-
-### [danijar,rnn] Recurrent Neural Nets in Tensorflow - Danijar Blog
-
-[Recurrent Neural Nets in Tensorflow - Danijar Blog][RNN]
-
-### [community,graph] Community Detection
-
-[community detection github][communitydetection]
-
-### [gans] A New Perspective on Adversarial Perturbations
-
-[A New Perspective on Adversarial Perturbations][ap]
-
-### [vae] Neural Splines Flows
-
-[Neural Splines Flows][NSF]
-
-### [brain] Brain Inspired Artificial Neural Nets
-
-[Brain Inspired Artificial Neural Nets][brain]
-
-### [unsupervised] Unsupervised Generative Attentional Network
-
-[Unsupervised Generative Attentional Network][ugatit]
-
-### [graph] 700x faster node2vec models: fastest random walks on a graph
-
-[700x faster node2vec models: fastest random walks on a graph][graphrw]
+### - [Facebook Video Pose 3D][facebookpose]
+### - [multilingual-universal-sentence-encoder][googleai2]
+### - [predicting-generalization-gap-in-deep][googleai2]
+### - [advancing-semi-supervised-learning-with][googleai2]
+### - [How Multilingual is Multilingual BERT][bertpaper]
+### - [What Kind of Language is Hard to Language-Model][hardlang]
+### - [Generating Logical Forms from Graph Representations of Text and Entities][logics] 
+### - [Meaning to Form: Measuring Systematicity as Information][meaningtoform]
+### - [Geoffrey Hinton Master Class][turinghinton]
+### - [Danijar AI BLOG][researchhierarchicak]
+### - [Recurrent Neural Nets in Tensorflow - Danijar Blog][RNN]
+### - [community detection github][communitydetection]
+### - [A New Perspective on Adversarial Perturbations][ap]
+### - [Neural Splines Flows][NSF]
+### - [Brain Inspired Artificial Neural Nets][brain]
+### - [Unsupervised Generative Attentional Network][ugatit]
+### - [700x faster node2vec models: fastest random walks on a graph][graphrw]
 
 [googleai1]: https://ai.googleblog.com/2019/07/multilingual-universal-sentence-encoder.html
 [googleai2]: https://ai.googleblog.com/2019/07/predicting-generalization-gap-in-deep.html
