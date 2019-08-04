@@ -1,28 +1,25 @@
 # Site settings
-title: Renato Fabbri (ttm rgk hybrid o0o0o rfabbri) - homepage
-email: renato.fabbri@gmail.com
+title: Daniel Penalva (uiuran penalvadguardthesilence! penalvelho penalvinha)
+email: dkajah@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  welcome to my (home)page about complex and social networks, linked data/semantic web,
-  natural language processing/text mining/computational linguistics,
-  data audiovisualization, computer music and other stuff which interests me.
+  Welcome to my Blog about AI Deep Learning Language and Algorithmic Affairs, find someone to love hope you are doing good
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ttm.github.io" # the base hostname & protocol for your site
-author: Renato Fabbri
-twitter_username: renatogk
-facebook_username: renato.fabbri
-github_username: ttm 
+url: "http://uiuran.github.io" # the base hostname & protocol for your site
+author: Daniel Penalva
+twitter_username: dpen
+facebook_username: daniel.penalva.7583
+github_username: uiuran
 irc_channel: labmacambira 
 
 social:
-    name: Renato Fabbri
+    name: Daniel Penalva
     links:
-        - https://github.com/ttm
-        - https://www.facebook.com/renato.fabbri
-        - https://www.linkedin.com/in/renatofabbri
+        - https://github.com/uiuran
+        - https://www.facebook.com/daniel.penalva.7583
 
 # Build settings
 markdown: kramdown
-timezone: America/Rio_de_Janeiro
+timezone: America/Sao_Paulo
 
 # for search engine optimization
 plugins_dir:
