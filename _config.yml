@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://uiuran.github.io" # the base hostname & protocol for your site
 author: Daniel Penalva
 twitter_username: dpen
-facebook_username: daniel.penalva.7583
+facebook_username: daniel.penalva
 github_username: uiuran
 irc_channel: labmacambira 
 
@@ -15,7 +15,7 @@ social:
     name: Daniel Penalva
     links:
         - https://github.com/uiuran
-        - https://www.facebook.com/daniel.penalva.7583
+        - https://www.facebook.com/daniel.penalva
 
 # Build settings
 markdown: kramdown
