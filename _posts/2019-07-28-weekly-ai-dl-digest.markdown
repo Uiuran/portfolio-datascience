@@ -5,15 +5,15 @@ categories: python chatbot bert bigpicture google data gatedunit unsupervised te
 comments: true
 published: true
 ---
-- [Becoming One With Data][becomeone]
-- [Recurrent Gated Units][gated]
-- [BERT Architectonics][bertarch]
-- [Google Big Picture Visualizations][bigpic]
-- [Generative Adversarial Networks Lab][ganslab]
-- [Chatbot Tutorial Pytorch][chatbot]
-- [Deep Unsupervised Learning Berkeley][deepunsup]
-- [Tensorflow Class: Tensorboard Hands On][handsontensorboard]
-- [Python 3.8 Release][python38]
+- ### [Becoming One With Data][becomeone]
+- ### [Recurrent Gated Units][gated]
+- ### [BERT Architectonics][bertarch]
+- ### [Google Big Picture Visualizations][bigpic]
+- ### [Generative Adversarial Networks Lab][ganslab]
+- ### [Chatbot Tutorial Pytorch][chatbot]
+- ### [Deep Unsupervised Learning Berkeley][deepunsup]
+- ### [Tensorflow Class: Tensorboard Hands On][handsontensorboard]
+- ### [Python 3.8 Release][python38]
 
 [becomeone]: https://blog.floydhub.com/becoming-one-with-the-data/
 [gated]: https://blog.floydhub.com/gru-with-pytorch
