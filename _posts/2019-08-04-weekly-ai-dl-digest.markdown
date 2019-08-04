@@ -8,7 +8,7 @@ published: true
 
 ### Facebook Video Pose 3D 
 
-https://github.com/Uiuran/VideoPose3D
+[Facebook Video Pose 3D][facebookpose]
 
 ### [semisupervised,google,generalization] Google AI Blog  
 
@@ -84,3 +84,4 @@ https://github.com/Uiuran/VideoPose3D
 [brain]: https://www.biorxiv.org/content/10.1101/582643v1
 [ugatit]: https://github.com/taki0112/UGATIT
 [graphrw]: https://www.singlelunch.com/2019/08/01/700x-faster-node2vec-models-fastest-random-walks-on-a-graph/
+[facebookpose]: https://github.com/Uiuran/VideoPose3D
