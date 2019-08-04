@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ "/css/impress-demo.css" | prepend: site.baseurl }}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <script type="text/javascript"
+    src="http://latex.codecogs.com/latexit.js"></script>
+    <script type="text/javascript">
+    LatexIT.add('p',true);
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+        displayAlign: "left"
+    });
+    </script>
+
+</head>
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id="bored" class="step verticalLine" data-x="-1000" data-y="-1500">
+    <h1>Topological stability and textual differentiation in human interaction networks:</h1>
+    <h2>statistical analysis, visualization and linked data</h2>
+    <br/>
+        <p><b>Advisor:</b> Prof. Dr. Osvaldo Novais de Oliveira Junior</p>
+        <p><b>Candidate:</b> Renato Fabbri</p>
+        <p>Doctoral thesis defense in Computational Physics, May/08/2017</p>
+        <p>São Carlos Institute of Physics, University of São Paulo</p>
+
+        <br/>
+        <img class="frontimage" src="/assets/ifsc.jpeg">
+        <img class="frontimage" src="/assets/cnpq.jpg">
+        <img class="frontimage" src="/assets/undp.jpg">
+        <img class="frontimage" src="/assets/1852.png">
+        <img class="frontimage" src="/assets/NEXOS.png">
+        <img class="frontimage" src="/assets/original-logo.png">
+    </div>
+
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+    <div class="step verticalLine" data-x="1000" data-y="-1500">
+    <h1>Outline</h1>
+    <ul>
+        <li>Introduction</li>
+        <ul>
+            <li>complex and human interaction networks</li>
+            <li>text mining, visualization, linked data</li>
+        </ul>
+        <li>Materials and methods</li>
+        <ul>
+            <li>data from email and other sources</li>
+            <li>circular statistics of temporal activity</li>
+            <li>complex networks: metrics, PCA and Erdös Sectioning</li>
+            <li>text mining: adaptation of the Kolmogorov-Smirnov test, Wordnet</li>
+        </ul>
+        <li>Results and discussion</li>
+        <ul>
+            <li>topological stability</li>
+            <li>textual differentiation</li>
+            <li>Versinus method for evolutive network visualization</li>
+            <li>Linked Open Social Database</li>
+            <li>other results</li>
+        </ul>
+        <li>Conclusions and further work</li>
+    </ul>
+       <p class="pnumber">1</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="3000" data-y="-3500">
+    <h1>Outline</h1>
+    <br/>
+    <p>How stable are the scale-free and other topological features
+        in social networks?
+        How does text and topology relate in social interaction
+        networks?</p>
+    <p>These questions are important for us to characterize our social systems.</p>
+    <p>We relied in the literature and data mining to reach
+    two main results presented in this work:</p>
+    <ul class="ul1">
+        <li>The stability of the networks with respect to hubs,
+        intermediary and peripheral participants,
+        to PCA formation of the components and to circular statistics of
+        activity along time.</li>
+        <li>Differentiation of linguistic features from hubs,
+        intermediary and peripheral participants.</li>
+    </ul>
+    <p>There are subsidiary results in <b>dynamic graph visualization</b> and
+    <b>linked data</b>. They enabled and shaped the core analysis.</p>
+       <p class="pnumber">2</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="5000" data-y="-1500">
+    <h1>Introduction</h1>
+        <img src="/assets/CienciasComFronteiras.png" height=500>
+       <p class="pnumber">3</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="7000" data-y="-1500">
+    <h1>Introduction</h1>
+    <iframe height="415" width="700"
+    src="https://www.youtube.com/embed/1EOnEVmqmmc">
+    </iframe>
+       <p class="pnumber">4</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="3000" data-y="-1500">
+    <h1>Introduction</h1>
+        <p>There are \(10^{80}\) <b>atoms in the observable universe</b>,
+a scale reference.
+Consider \(N\) the number of individuals needed to yield
+<b>more possible networks than atoms in the universe</b>.
+Each edge is a Bernoulli variable: the edge may be present or not.</p>
+<p><br/></p>
+<div lang="latex">
+2^{N \choose 2} > 10^{80} \Rightarrow 
+log_2[2^{N \choose 2}] > log_2(10^{80}) \Rightarrow
+{N \choose 2} > \frac{log_{10}(10^{80})}{log_{10}2} \Rightarrow \nonumber\\
+\Rightarrow \frac{N.(N-1)}{2} > \frac{80}{log_{10}2} \Rightarrow N > 23.5988
+</div>
+<p>I.e. only 24 vertices are needed for there to be more possible networks
+than atoms in the universe. This endorses the utility of <b>paradigms</b> for networks,
+and of <b>generic measures</b> for each vertex and for the network,
+instrumental for <b>complex networks</b>, including
+<b>human interaction networks</b>.</p>
+
+<p><b>Complex System</b> \(\Rightarrow\)
+consists of several parts whose interaction exhibits
+emerging behavior.
+It is usual to consider that a complex system:
+processes information, exhibits adaptive mechanisms,
+may have reproduction capabilities.
+A complex system is integrated with other complex systems
+and the environment in which it subsists.</p>
+       <p class="pnumber">5</p> 
+    </div>
+
+
+    <div class="step verticalLine" data-x="9000" data-y="-1500">
+    <h1>Introduction</h1>
+    <p><br/></p>
+    <ul>
+        <li>Complex networks</li>
+        <li>Text mining</li>
+        <li>Network visualization</li>
+        <li>Linked data</li>
+        <li>Social participation</li>
+        <li>Programming, APIs and protocols</li>
+        <li>Art</li>
+    </ul>
+       <p class="pnumber">6</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="11000" data-y="-1500">
+    <h1>Materials</h1>
+    <p><br/></p>
+    <ul>
+        <li>Emails from the Gmane database</li>
+        <li>Data from:</li>
+        <ul style="font-size:80%">
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>IRC</li>
+            <li>Cidade Democrática</li>
+            <li>ParticipaBR</li>
+            <li>Algorithmic Autoregulation (AA)</li>
+        </ul>
+    </ul>
+       <p class="pnumber">7</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="13000" data-y="-1500">
+    <h1>Methods</h1>
+    <p><br/></p>
+    <p>These are the methods considered for studying the topology of the
+    systems:</p>
+    <ul class="ul1">
+        <li>Interaction networks attainment</li>
+        <li>PCA of topological metrics</li>
+        <li>Erdös sectioning</li>
+    </ul>
+    <p>The core method used to observe textual differences in the Erdös sectors
+    is an <b>adaptation of the Kolmogorov-Smirnov test</b>.</p>
+    <p>For enabling the research, we had to use methods for:</p>
+    <ul class="ul1">
+        <li>Audiovisualization of networks</li>
+        <li>Linked representation of data</li>
+        <li>Typological and humanistic considerations</li>
+    </ul>
+        <p>Directional statistics (or spherical or <b>circular statistics</b>)
+        are generic for observations in Riemannian manifolds and was used
+        to observe the distribution of sent times from email
+        messages.</p>
+       <p class="pnumber">8</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="15000" data-y="-1500">
+    <h1>Circular statistics</h1>
+<p>Consider each measure over time:</p>
+
+<div lang="latex" style="font-size:150%">
+\theta=2\pi \frac{measure}{period}\\
+
+z_i= e^{i\theta} \\
+m_n=\frac{1}{N}\sum_{i=1}^N z_i^n \;\;\text{ are the moments}
+</div>
+<p>The norm and angle of the moments:</p>
+<div lang="latex" style="font-size:150%">
+    R_n=|m_n| \nonumber \\
+    \theta_\mu=Arg(m_1) \\
+    \theta_\mu'=\frac{period}{2\pi} \theta_\mu \nonumber
+</div>
+
+<p>The angle is measure of localization and the dispersion is given by:</p>
+<div lang="latex">
+    Var(z)=1 - R_1 \nonumber\\
+    S(z)= \sqrt{-2\ln(R_1)}\\
+    \delta(z)=\frac{1-R_2}{2 R_1^2} \nonumber
+</div>
+
+<p>We also used \(\frac{b_h}{b_l}\) between the largest \(b_h\) and the
+smallest \(b_l\) incidence in the histograms.</p>
+       <p class="pnumber">9</p> 
+
+    </div>
+
+    <div class="step verticalLine" data-x="17000" data-y="-1500">
+    <h1>Interaction networks attainment</h1>
+    <p><br/></p>
+        <img src="/assets/criaRede3_.png" height=350>
+       <p class="pnumber">10</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="19000" data-y="-1500">
+    <h1>Erdös sectioning</h1>
+        <img src="/assets/fser__.png" height=200>
+<div lang="latex">
+    \sum_{x=k_i}^{k_j} \widetilde{P}(x) < \sum_{x=k_i}^{k_j} P(x) \Rightarrow \text{i is intermediary}
+</div>
+
+<div lang="latex">
+    P(k)=\binom{2(N-1)}{k}p_e^k(1-p_e)^{2(N-1)-k}
+</div>
+<p>where</p>
+<div lang="latex">
+p_e=\frac{z}{N(N-1)}
+</div>
+       <p class="pnumber">11</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="21000" data-y="-1500">
+    <h1>PCA in topological metrics</h1>
+<p><br/></p>
+<p>Mean and standard deviation of measurements <i>j</i> in eigenvectors
+<i>k</i>
+through all <i>l</i> instances and of eigenvalues <i>k</i> through all
+<i>l</i> instances:</p>
+<p id="lefteq">
+\begin{eqnarray} 
+\mu_{V'}[j,k]   &=\frac{\sum_l^L V'[j,k,l]}{L}\nonumber\\
+\sigma_{V'}[j,k]&=\sqrt{\frac{(\mu_{V'}-V'[j,k,l])^2}{L}}\\\nonumber
+\mu_{D'}[k]&=\frac{\sum_l^L D'[k,l]}{L}\\\nonumber
+\sigma_{D'}[k]&=\sqrt{\frac{(\mu_{D'}-D'[k,l])^2}{L}}
+\end{eqnarray}
+</p>
+<p>We used standard measures of (in, out, total-) degree, (in, out, total-) strength,
+betweenness centrality and clustering coefficient.
+We also used non-standard measures of asymmetry and disequilibrium.</p>
+       <p class="pnumber">12</p> 
+    </div>
+    <script>
+        function toLeft2(){
+            p=document.getElementById("lefteq");
+            for (i=0; i < p.children.length; i++){
+                p.children[i].setAttribute("style","text-align:left");
+                for (j=0; j < p.children[i].children.length; j++){
+                    p.children[i].children[j].setAttribute("style","text-align:left;font-size:80%;color:black;");
+                }
+            }
+        }
+        setTimeout(toLeft2, 2000);
+    </script>
+
+    <div class="step verticalLine" data-x="23000" data-y="-1500">
+    <h1>Adaptation of the Kolmogorov-Smirnov two sample test</h1>
+        <img src="/assets/300px-KS2_Example.png" height=150>
+
+<div lang="latex">
+D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}} \Rightarrow F_{1,n} \neq F_{2,n'}
+</div>
+<div lang="latex">
+c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'
+</div>
+<table id="t01">
+    <tr>
+        <th>&alpha;</th> <th>0.1</th>  <th>0.05</th> <th>0.025</th>
+        <th>0.01</th> <th>0.005</th> <th>0.001</th>
+    </tr>
+    <tr>
+        <td>c(&alpha;)</td> <td>1.22</td> <td>1.36</td> <td>1.48</td>
+        <td>1.63</td> <td>1.73</td>  <td>1.95</td>
+    </tr>
+</table>
+       <p class="pnumber">13</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="25000" data-y="-1500">
+    <h1>Audiovisualization of data</h1>
+    <br/>
+        <img src="/assets/arteRede.jpg" height=350>
+       <p class="pnumber">14</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="27000" data-y="-1500">
+    <h1>Linked data representations and ontologies</h1>
+    <br/>
+    <p>To enable our research start a social dataset which fits our
+    needs, we developed:</p>
+    <ul class="ul1">
+        <li>translation of relational data into RDF by means of Python
+        scripts.</li>
+        <li>Formalization of social participation instances and
+        mechanisms in OWL</li>
+    </ul>
+    <br/>
+    <p>We maintained online infrastructure to navigate and query the linked
+    data for some months. 
+    USP cloud services started charging so we had to withdraw these
+    services.</p>
+       <p class="pnumber">15</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="29000" data-y="-1500">
+    <h1>Typological and humanistic considerations</h1>
+    <br/>
+    <ul class="ul1" style="font-size:70%">
+        <li>Our networks are constituted by human beings.</li>
+        <li>Prejudice factors.</li>
+        <li>The environment in which the network is observed.</li>
+        <li>(Percolatory) Experiments and performances in social
+        systems.</li>
+        <li>Anthropological physics.</li>
+    </ul>
+       <p class="pnumber">16</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="31000" data-y="-1500">
+    <h1>Results</h1>
+    <br/>
+    <ul class="ul1" style="font-size:70%">
+        <li>Temporal and topological stability.</li>
+        <li>Textual differentiation.</li>
+        <li>Initialization of the (Brazilian) social participation data
+        cloud.</li>
+        <li>The Versinus dynamic graph visualization method.</li>
+        <li>Software development.</li>
+    </ul>
+       <p class="pnumber">17</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="33000" data-y="-1500">
+    <h1>Temporal and topological stability</h1>
+    <br/>
+    <ul class="ul1" style="font-size:60%">
+        <li>Circular statistics are about the same in every email list
+        and in all scales from seconds to semesters.</li>
+        <li>Fixed fractions of participants in each of the Erdös
+        sectors, in accordance with the literature. This might be the
+        first use of the method and verification of the consistency of
+        the hubs, intermediary and peripheral sectors.</li>
+        <li>Stability of the principal components (PCA).</li>
+        <li>Human typology from Erdös sectors.</li>
+    </ul>
+       <p class="pnumber">18</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="500">
+    <h1>Temporal and topological stability</h1>
+    <br/>
+        <img src="/assets/InText-WLAU-S1000__.png" height=300>
+       <p class="pnumber">19</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="-3500">
+    <h1>Temporal and topological stability</h1>
+    <p><br/></p>
+        <img src="/assets/pca.png" height=400>
+       <p class="pnumber">20</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="2500">
+    <h1>Temporal and topological stability</h1>
+    <br/>
+        <img src="/assets/circularStats.png" height=250>
+       <p class="pnumber">21</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="4500">
+    <h1>Temporal and topological stability</h1>
+        <img src="/assets/tableTime.png" height=450>
+       <p class="pnumber">22</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="37000" data-y="-1500">
+    <h1>Textual differentiation</h1>
+    <p><br/></p>
+    <ul class="ul1" style="font-size:60%">
+        <li>The texts produced by each of the Erdös sectors are extremely
+        different. The differences found are greater than between
+        different networks or between the same sector of different
+        networks.</li>
+        <li>The differences are sometimes evident: hubs use smaller words, sentences and messages. Peripherals
+        use more nouns and less adjectives.</li>
+        <li>Correlations of topological and textual measurements do not present trivial patterns.</li>
+        <li>Principal components are mainly of textual or topological
+        metrics; the merge of these different sets of metrics is modest.</li>
+        <li>Persistence of the differences in incident and existent
+        words.</li>
+    </ul>
+       <p class="pnumber">23</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="39000" data-y="-1500">
+    <h1>Textual differentiation</h1>
+        <img src="/assets/textDiff.png" height=500>
+       <p class="pnumber">24</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="39000" data-y="500">
+    <h1>Textual differentiation</h1>
+    <p><br/></p>
+        <img src="/assets/textDiffSents.png" height=350>
+        <img src="/assets/textDiffPOS.png" height=350>
+       <p class="pnumber">25</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="41000" data-y="-1500"></p>
+    <h1>Audiovisualization with Versinus</h1>
+    <p><br/></p>
+    <iframe height="50%" width="50%"
+    src="https://www.youtube.com/embed/1EOnEVmqmmc">
+    </iframe>
+    <p>In Versinus (Latim versus+sinus meaning line+sinusoid),
+    the Erdös sectors are positioned on the first and second half of the
+    sinusoid and on the upper line. Vertex size corresponds to in
+    and out strengths. Color corresponds to clustering coefficient.
+    Music is synthesized using the total activity of the four most
+    active hubs.</p>
+       <p class="pnumber">26</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="43000" data-y="-1500">
+    <h1>Linked social data</h1>
+    <p><br/></p>
+    <ul class="ul1" style="font-size:60%">
+        <li>Formalizations of ontologies (OWL) and vocabularies (SKOS) 
+        of
+        social structures. OPS, OPA, OPP, Ontologiaa, OCD, OBS,
+        VBS.</li>
+        <li>Python scripts for translating relational data into RDF.</li>
+        <li>Data-oriented ontology synthesis method.</li>
+    </ul>
+    <p><br/></p>
+        <img src="/assets/obsPNPS_mesam.png" height=200>
+       <p class="pnumber">27</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="45000" data-y="-1500">
+    <h1>Art and sensory mappings</h1>
+    <p><br/></p>
+    <ul class="ul1" style="font-size:60%">
+        <li>Four hubs dance. Social prelude.</li>
+        <li>Versinus.</li>
+        <li>Other pieces: online app (PHP+Python) for rendering email
+        related images and measurements. Sonifications.</li>
+        <li>Artistic presentations: sonic skull, freakcoding.</li>
+    </ul>
+       <p class="pnumber">28</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="47000" data-y="-1500">
+    <h1>Software</h1>
+    <p><br/></p>
+    <p>Official Python packages (PyPI) for precise and efficient sharing
+    of the developments:</p>
+    <ul class="ul1">
+        <li>Observation of circular measurements, topological stability
+        and textual differentiation. The Percolation package.</li>
+        <li>Routines for representing as RDF the relational data from
+        the social participation portals ParticipaBR, Cidade Democrática
+        and AA. The Participation package.</li>
+        <li>Routines for representing as RDF the relational data from
+        the social networking portals/protocols Facebook, Twitter and
+        IRC. The Social package.</li>
+        <li>Routines for representing as RDF the relational data from
+        email lists in the Gmane database. The Gmane package.</li>
+        <li>Routines rendering data visualizations with emphasis on
+        networks. The Visuals package.</li>
+        <li>Routines rendering music and data sonification. The Music package.</li>
+    </ul>
+       <p class="pnumber">29</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="49000" data-y="-1500">
+    <h1>Conclusions</h1>
+    <p><br/></p>
+    <ul class="ul1">
+        <li>We believe that the stability of the human interaction networks
+        is better quantified and qualified by the invariance of the
+        fraction of participants in each sector, the small dispersion of
+        the principal components and the circular statistics.</li>
+        <li>The texts produced by each sector are very different. The
+        differences are in some cases easy to interpret from data.</li>
+        <li>Data, ontologies and software legacy.</li>
+        <li>Typologies derived from the analysis.</li>
+        <li>Two published articles (not related to the thesis).</li>
+        <li>The article on the stability of interaction networks has
+        been accepted for publication in Physica A.</li>
+        <li>Other articles are being submitted to journals (about power
+        laws and music).</li>
+        <li>Other articles are being revisited and enhanced for
+        publication (on the textual differentiation, on ontologies, on
+        Versinus, on the adaptation of the Kolmogorov-Smirnov two-sample text).</li>
+        <li>Many possibilities for next steps e.g. inclusion of TF-IDF
+        measurements, sentiment analysis, other measures of text and
+        topology, visual analytics.</li>
+    </ul>
+       <p class="pnumber">30</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="51000" data-y="-1500">
+    <h1>Bibliography</h1>
+    <p><br/></p>
+    <ul class="ul1">
+        <li>BIRD, C. et al. Mining email social networks. In:
+        INTERNATIONAL WORKSHOP ON MINING SOFTWARE REPOSITORIES. 2006,
+        Shanghai. Proceedings… New York: ACM. p. 137–143, 2006.</li>
+        <li>NEWMAN, M. Networks: an introduction. Oxford: Oxford
+        University Press, 2010.</li>
+        <li>COSTA, L. F. et al. Characterization of complex networks: a
+        survey of measurements. Advances in Physics, v. 56, n. 1, p.
+        167–242, 2007.</li>
+        <li>BIRD, S.; KLEIN, E.; LOPER, E. Natural language processing
+        with Python: analyzing text with the natural language toolkit.
+        Beijing: O'Reilly, 2009.</li>
+        <li>BECK, F. et al. A taxonomy and survey of dynamic graph
+        visualization. 2016.</li>
+        <li>BERNERS-LEE, T. Linked data. 2006.</li>
+    </ul>
+       <p class="pnumber">31</p> 
+    </div>
+
+
+    <div class="step verticalLine" data-x="23000" data-y="-1500"
+    data-z="10000" 
+    data-scale="4" data-rotate-x="-90" data-rotate-y="90"
+    data-rotate-z="30">
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <h1 style="text-align:center">Thank you!</h1>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+        <img class="frontimage" src="/assets/ifsc.jpeg">
+        <img class="frontimage" src="/assets/cnpq.jpg">
+        <img class="frontimage" src="/assets/undp.jpg">
+        <img class="frontimage" src="/assets/1852.png">
+        <img class="frontimage" src="/assets/NEXOS.png">
+        <img class="frontimage" src="/assets/original-logo.png">
+    </div>
+</div>
+<script src="/assets/impress.js"></script>
+<script>impress().init();</script>
+</body>
+
+</html>

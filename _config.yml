@@ -1,0 +1,32 @@
+# Site settings
+title: Renato Fabbri (ttm rgk hybrid o0o0o rfabbri) - homepage
+email: renato.fabbri@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  welcome to my (home)page about complex and social networks, linked data/semantic web,
+  natural language processing/text mining/computational linguistics,
+  data audiovisualization, computer music and other stuff which interests me.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://ttm.github.io" # the base hostname & protocol for your site
+author: Renato Fabbri
+twitter_username: renatogk
+facebook_username: renato.fabbri
+github_username: ttm 
+irc_channel: labmacambira 
+
+social:
+    name: Renato Fabbri
+    links:
+        - https://github.com/ttm
+        - https://www.facebook.com/renato.fabbri
+        - https://www.linkedin.com/in/renatofabbri
+
+# Build settings
+markdown: kramdown
+timezone: America/Rio_de_Janeiro
+
+# for search engine optimization
+plugins_dir:
+      - jekyll-seo-tag
+
+plugins:
+   - jekyll-seo-tag

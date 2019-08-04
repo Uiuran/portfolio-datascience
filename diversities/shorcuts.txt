@@ -1,0 +1,220 @@
+shift+<F10> or the 'files' button brings up the menu to select show menubar for gnome-terminal.
+
+byobu should replace completely the screen and terminals/tabs suite.
+
+installed  the vim plugins in: https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+
+also liked: http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
+
+they differ in the use of python mode
+
+===
+Skip errors and warnings                                *'g:pymode_lint_ignore'*
+E.g. "E501,W002", "E2,W" (Skip all Warnings and Errors that starts with E2) and etc
+>
+    let g:pymode_lint_ignore = "E501,W"
+
+===
+rope a autocompletion
+
+===
+motion and folding
+
+===
+try to make all python run and debug inside vim (python mode?)
+
+understand: *****
+    Rope
+        Copyright (C) 2006-2010 Ali Gholami Rudi
+        Copyright (C) 2009-2010 Anton Gritsay
+
+    Pylint
+        Copyright (C) 2003-2011 LOGILAB S.A. (Paris, FRANCE).
+        http://www.logilab.fr/
+
+    Pyflakes:
+        Copyright (c) 2005 Divmod, Inc.
+        http://www.divmod.com/
+
+    fugitive
+
+
+=====
+Here rope can easily infer the type of var1. But for knowing the type of var2, it needs to analyze the items inserted into l2 which might happen in other modules. Rope can do that by running SOA on that module.
+
+=======
+You can enable using Rope as providing for Omni completion by setting omnifunc variable to RopeCompleteFunc. E.g., by putting something like this in your ~/.vimrc:
+
+autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+
+=====
+
+Jedi-Vim
+Best extension, which makes full Python IDE from your Vim!
+
+vim-dispatch and vim-python-tools
+
+===
+./configure --enable-perlinterp --enable-python3interp --enable-rubyinterp --enable-cscope --enable-gui=auto --enable-gtk2-check --enable-gnome-check --with-features=huge --enable-multibyte --with-x --with-compiledby="xorpd" --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu --prefix=/opt/vim74 --with-vim-name=vim3
+
+===
+
+rope, vim python mode, música com os audios renderizados pelos scripts em tabs diferentes.
+byobu, nerdtree, fugitive.
+Tabs, automate, restructure, refactoring,, flint, jobs, screen, imux, gnome-terminal, terminator, autocompletion, byobu inside byobu, 
+
+
+===
+Algorítmo genérico para selecionar os que gerarem áudio e que mais agradarem (ajuste de fitness).
+Usar para gerar música através dos dados sociais. Deixar para os comentarios e likes alterarem o fitness.
+Fazer em python mesmo, sem andar nas tabs do vim.
+Cada indivíduo consiste em uma string que, se gerar música (ou especificacoes para), possui fitness>0.
+Se demorar para sempre -> 0. Os critérios para o fitness, espectrais e rítmicos, podem ser tunados iterativamente
+pelo usuário.
+Uma estratégia dinâmica pode ser: alternar iterações com operações mais garantidas de gerar sons, para popular,
+introduzir mutações que dizimam a população para gerar diversidade.
+
+==========
+
+make curl tutorial? 
+https://curl.haxx.se/docs/httpscripting.html
+
+make awk tutorial?
+
+=========
+
+console vi mode cheatsheet:
+http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.pdf
+
+=========
+
+tikerpop
+http://tinkerpop.apache.org/docs/3.1.1-incubating/tutorials/getting-started/
+
+=======
+
+reredirect para redirecionar a saída de um job:
+https://github.com/jerome-pouiller/reredirect
+
+======
+
+no mooc, sobre object oriented programming:
+__repr__, __len__, __lt__, 
+https://docs.python.org/3.3/reference/datamodel.html
+
+substitution principle (important aspects of class should apply to all subclasses)
+data hiding principle (hide aspects of the object, do not expose internal representation)
+
+======
+
+Learn vim the hard way: http://learnvimscriptthehardway.stevelosh.com/
+(prometi-me fazer o percurso todo em algum momento (com sorte, algo como ~1
+semana com os exercícios))
+
+=====
+
+python the hard way parece bobo. Os videos da enthought preciso buscar.
+
+=====
+
+https://xianblog.files.wordpress.com/2015/03/0d67e-6a010534b1db25970b01b7c7602d0b970b-pi.gif
+vim graphical cheat sheet, aprendi umas boas, tudo debaixo do dedo.
+
+=====
+
+jedi para autocompletion (+neocomplete)
+ou https://github.com/Valloric/YouCompleteMe
+para autocompletion
+
+rope para refactoring
+??? para padrao de estilo
+??? para syntax hinghlinghting
+
+http://bicyclerepair.sourceforge.net/
+para refactoring? (refactoring browser?)
+
+baron, RedBaron, redflyingbaron? (refactoring)
+
+traad?
+
+====
+
+para caçar coisas do vim:
+http://vimawesome.com/
+
+seleção:
+http://vimawesome.com/plugin/surround-vim
+http://vimawesome.com/plugin/ctrlp-vim-state-of-grace **
+http://vimawesome.com/plugin/vim-colors-solarized-sparks-fly
+http://vimawesome.com/plugin/vim-easymotion-safe-and-sound **
+http://vimawesome.com/plugin/unite-vim-back-to-december
+http://vimawesome.com/plugin/delimitmate
+http://vimawesome.com/plugin/unimpaired-vim **
+http://vimawesome.com/plugin/vim-multiple-cursors
+http://vimawesome.com/plugin/vim-colorschemes-sweeter-than-fiction
+http://vimawesome.com/plugin/l9 ?
+http://vimawesome.com/plugin/taglist-vim **
+http://vimawesome.com/plugin/fugitive-vim
+http://www.vim.org/scripts/script.php?script_id=294 (align)
+http://www.vim.org/scripts/script.php?script_id=3465 (tagbar)
+http://www.vim.org/scripts/script.php?script_id=2441 pyflakes
+http://www.vim.org/scripts/script.php?script_id=891 pylint
+http://www.vim.org/scripts/script.php?script_id=2914 pep8
+http://www.vim.org/scripts/script.php?script_id=1890 Lusty Explorer
+http://www.vim.org/scripts/script.php?script_id=4006 hyperlist?
+https://recordnotfound.com/vim-startify-mhinz-2339 *****
+http://www.vim.org/scripts/script.php?script_id=4914 repeatable-motions.vim ****
+http://www.vim.org/scripts/script.php?script_id=2174 repmo.vim *******
+====
+
+
+====
+
+vacant mappings:
+http://vimcasts.org/blog/2014/02/follow-my-leader/
+(operator1+operator2 or operaor+non-movement are vacant!!!!)
+
+===
+
+make percolationvim write lv2 plugins.
+
+===
+
+make vim plugins for:
+- rating possible command sequences for mappings, abbreviations, etc.
+categorize moves as operations into commands. Orthogonality, etc.
+Core: operation1+operation2 or operation1+non-movement == availble sequence for mapping.
+Sequences that dont imply in modifications of the state ( down+up, left+right )
+should also be taken advantage of.
+The sequence of typing can be analysed to give the used analytics
+of his usage to enhance measures and awareness of his usage .
+Enable markup of visits/jumps as consulting/search/exact_move/bypass/any_more?
+Enable training in using especific features such as
+such as text/moves and 
+001989 techniques0 such as using only some figers of each hand.
+
+===
+
+read music scores and vim commands as words with its shole and abbreviated names.
+Excercises:
+go from do4-d6 meentaly, remembering visually the note in the staff
+(and maybe also their sound)
+
+===
+
+convencionar que todo subst e adj da lingua tem uma classe
+socialparticipation/<lang_tag>
+<lang_tag> can be at least en pt e esperanto?.
+
+===
+
+https://en.wikipedia.org/wiki/Help:IPA
+
+https://en.wikipedia.org/wiki/Lojban
+e toki pona.
+
+===
+
+https://en.wikipedia.org/wiki/Linguistic_relativity
+
+

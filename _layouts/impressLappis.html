@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ "/css/impress-demo.css" | prepend: site.baseurl }}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <script type="text/javascript"
+    src="http://latex.codecogs.com/latexit.js"></script>
+    <script type="text/javascript">
+    LatexIT.add('p',true);
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+        displayAlign: "left"
+    });
+    </script>
+
+</head>
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id="bored" class="step verticalLine" data-x="-1000" data-y="-1500">
+    <h1>Sistemas complexos e redes complexas:</h1>
+    <h2>fundamentos e algumas aplicações em redes sociais e linguagem</h2>
+    <br/>
+        <p><b>Pesquisador:</b> Renato Fabbri</p>
+        <p>Instituto de Ciências Matemáticas e de Computação (ICMC/USP)</p>
+        <p>FAPESP, projeto 2017/05838-3</p>
+
+        <br/>
+        <img class="frontimage" style="background: white" src="/assets/icmc.png">
+        <img class="frontimage" src="/assets/fapesp.jpg">
+    </div>
+
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+    <div class="step verticalLine" data-x="1000" data-y="-1500">
+    <h1>Roteiro</h1>
+    <ul>
+        <li>Introdução</li>
+        <ul>
+            <li>sistemas complexos e redes complexas</li>
+            <li>redes em estruturas sociais humanas e na linguagem</li>
+        </ul>
+        <li>Materiais</li>
+        <li>Alguns métodos</li>
+        <ul>
+            <li>medidas fundamentais/básicas</li>
+            <li>PCA</li>
+            <li>setorialização de Erdös</li>
+            <li>adaptação do teste de Kolmogorov-Smirnov</li>
+            <li>wordnet</li>
+        </ul>
+        <li>Alguns resultados e discussão</li>
+        <ul>
+            <li>estabilidade topológica</li>
+            <li>diferenciação textual</li>
+            <li>audiovisualização de redes</li>
+            <li>LOSD: linked open social database</li>
+            <li>bots</li>
+        </ul>
+        <li>Conclusões e trabalhos futuros</li>
+    </ul>
+       <p class="pnumber">1</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="5000" data-y="-1500">
+    <h1>Introdução</h1>
+        <img src="/assets/CienciasComFronteiras.png" height=500>
+       <p class="pnumber">2</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="7000" data-y="-1500">
+    <h1>Introdução</h1>
+    <iframe height="415" width="700"
+    src="https://www.youtube.com/embed/1EOnEVmqmmc">
+    </iframe>
+       <p class="pnumber">3</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="3000" data-y="-1500">
+    <h1>Introdução</h1>
+        <p>Considere \(\approx 10^{80}\) <b>átomos no universo observável</b>,
+uma escala de referência.
+Seja \(N\) o número de indivíduos necessários para haver
+<b>mais redes possíveis que átomos no universo</b>.
+Cada aresta é uma variável de Bernoulli: a aresta pode estar presente ou não:</p>
+<p><br/></p>
+<div lang="latex">
+2^{N \choose 2} > 10^{80} \Rightarrow 
+log_2[2^{N \choose 2}] > log_2(10^{80}) \Rightarrow
+{N \choose 2} > \frac{log_{10}(10^{80})}{log_{10}2} \Rightarrow \nonumber\\
+\Rightarrow \frac{N.(N-1)}{2} > \frac{80}{log_{10}2} \Rightarrow N > 23.5988
+</div>
+<p>I.e. com apenas 24 vértices, existem mais redes possíveis que átomos no universo.
+Isso explicita a utilidade dos <b>paradigmss</b> para redes,
+e de <b>medidas genéricas</b> para cada vértice e para cada rede,
+instrumentais para a área das <b>redes complexas</b>, incluindo
+<b>redes de interação e relacionamento humanas</b>.</p>
+
+<p><b>Sistema Complexo</b> \(\Rightarrow\)
+consiste de partes cuja interação apresenta comportamento
+emergente.
+É usual considerar que um sistema complexo:
+processa informação, possui mecanismos de adaptação,
+pode apresentar mecanismos de reprodução.
+Um sistema complexo é integrado a outros sistemas complexos
+e ao meio em que subsiste.</p>
+       <p class="pnumber">4</p> 
+    </div>
+
+
+    <div class="step verticalLine" data-x="9000" data-y="-1500">
+    <h1>Introdução</h1>
+    <p><br/>Exemplos de áreas em que as redes complexas são utilizadas:</p>
+    <ul>
+        <li>Redes complexas (pesquisa de base/fundamental)</li>
+        <li>Mineração de texto</li>
+        <li>Visualização de dados/redes</li>
+        <li>Dados ligados</li>
+        <li>Participação social</li>
+        <li>Programação, APIs, protocolos</li>
+        <li>Arte</li>
+    </ul>
+       <p class="pnumber">5</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="11000" data-y="-1500">
+    <h1>Materiais</h1>
+    <p><br/>Resultados obtidos com dados de:</p>
+    <ul>
+        <li>Emails (da base de dados Gmane)</li>
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>IRC</li>
+        <li>Cidade Democrática</li>
+        <li>ParticipaBR</li>
+        <li>Autorregulação Algorítmica (AA)</li>
+    </ul>
+       <p class="pnumber">6</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="13000" data-y="-1500">
+    <h1>Métodos</h1>
+    <p><br/></p>
+    <ul class="ul1">
+        <li>Obtenção de redes (de relacionamento ou interação)</li>
+        <li>PCA de medidas topológicas</li>
+        <li>Setorialização de Erdös</li>
+    </ul>
+    <p>O método principal que utilizamos para observar diferenciação linguística
+    dentre os setores de Erdös é uma adaptação do <b>teste de Kolmogorov-Smirnov</b>.</p>
+    <p>Para realizar a pesquisa, tivemos que utilizar métodos para:</p>
+    <ul class="ul1">
+        <li>Audiovisualização das redes</li>
+        <li>Representação dos dados como dados ligados</li>
+        <li>Considerações tipológicas e humanísticas</li>
+    </ul>
+        <p>Estatísticas direcionais (ou circulares ou esféricas)
+        são genéricas para manifolds Riemannianos e foram usados para observar
+        as distribuições de atividade ao logo do tempo.</p>
+       <p class="pnumber">7</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="17000" data-y="-1500">
+    <h1>Obtenção das redes de interação</h1>
+    <p><br/></p>
+        <img src="/assets/criaRede3_.png" height=350>
+       <p class="pnumber">8</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="19000" data-y="-1500">
+    <h1>Setorialização de Erdös</h1>
+        <img src="/assets/fser__.png" height=200>
+<div lang="latex">
+    \sum_{x=k_i}^{k_j} \widetilde{P}(x) < \sum_{x=k_i}^{k_j} P(x) \Rightarrow \text{i \'e intermedi\'ario}
+</div>
+
+<p>com</p>
+<div lang="latex">
+    P(k)=\binom{2(N-1)}{k}p_e^k(1-p_e)^{2(N-1)-k}
+</div>
+<p>onde</p>
+<div lang="latex">
+p_e=\frac{z}{N(N-1)}
+</div>
+       <p class="pnumber">9</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="21000" data-y="-1500">
+    <h1>PCA de medidas topológicas</h1>
+<p><br/></p>
+<p>Abrir scripts.</p>
+<p>Medidas utilizadas:</p>
+<p id="lefteq">
+\begin{eqnarray} 
+\mu_{V'}[j,k]   &=\frac{\sum_l^L V'[j,k,l]}{L}\nonumber\\
+\sigma_{V'}[j,k]&=\sqrt{\frac{(\mu_{V'}-V'[j,k,l])^2}{L}}\\\nonumber
+\mu_{D'}[k]&=\frac{\sum_l^L D'[k,l]}{L}\\\nonumber
+\sigma_{D'}[k]&=\sqrt{\frac{(\mu_{D'}-D'[k,l])^2}{L}}
+\end{eqnarray}
+</p>
+<p>Utilizamos medidas padrão de grau e força (totais, de entrada e saída), centralidade de betweenness, e coeficiente de clusterização.
+Também utilizamos medidas não-padrão de "assimetria" e "disequilíbrio".</p>
+       <p class="pnumber">10</p> 
+    </div>
+    <script>
+        function toLeft2(){
+            p=document.getElementById("lefteq");
+            for (i=0; i < p.children.length; i++){
+                p.children[i].setAttribute("style","text-align:left");
+                for (j=0; j < p.children[i].children.length; j++){
+                    p.children[i].children[j].setAttribute("style","text-align:left;font-size:80%;color:black;");
+                }
+            }
+        }
+        setTimeout(toLeft2, 2000);
+    </script>
+
+    <div class="step verticalLine" data-x="23000" data-y="-1500">
+    <h1>Adaptação do teste de Kolmogorov-Smirnov de duas amostras</h1>
+        <img src="/assets/300px-KS2_Example.png" height=150>
+
+<div lang="latex">
+D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}} \Rightarrow F_{1,n} \neq F_{2,n'}
+</div>
+<div lang="latex">
+c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'
+</div>
+<table id="t01">
+    <tr>
+        <th>&alpha;</th> <th>0.1</th>  <th>0.05</th> <th>0.025</th>
+        <th>0.01</th> <th>0.005</th> <th>0.001</th>
+    </tr>
+    <tr>
+        <td>c(&alpha;)</td> <td>1.22</td> <td>1.36</td> <td>1.48</td>
+        <td>1.63</td> <td>1.73</td>  <td>1.95</td>
+    </tr>
+</table>
+       <p class="pnumber">11</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="25000" data-y="-1500">
+    <h1>Audiovisualização dos dados</h1>
+    <br/>
+        <img src="/assets/arteRede.jpg" height=350>
+       <p class="pnumber">12</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="27000" data-y="-1500">
+    <h1>Representações em dados ligados e ontologias</h1>
+    <br/>
+    <p>Para dar suporte à pesquisa, desenvolvemos:</p>
+    <ul class="ul1">
+        <li>tradução de dados relacionais (e.g. SQL) para RDF através de scripts Python.</li>
+        <li>Formalização de instâncias e mecanismos de participação social em OWL.</li>
+    </ul>
+    <br/>
+    <p>Mantivemos uma infraestrutura online para navegação e busca nestes dados ligados 2m 2015.
+    Os serviços de computação em nuvem começaram a ser cobrados,
+    motivo pelo qual retiramos o serviço.</p>
+       <p class="pnumber">13</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="29000" data-y="-1500">
+    <h1>Considerações tipológicas e humanísticas</h1>
+    <br/>
+    <ul class="ul1" style="font-size:70%">
+        <li>Estas redes são constituídas de seres humanos.</li>
+        <li>Fatores com potencial para o preconceito.</li>
+        <li>O ambiente em que a rede é observada.</li>
+        <li>Experimentos percolatórios e performances em sistemas sociais virtuais.</li>
+        <li>Física antropológica.</li>
+    </ul>
+       <p class="pnumber">14</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="31000" data-y="-1500">
+    <h1>Resultados</h1>
+    <br/>
+    <ul class="ul1" style="font-size:70%">
+        <li>Estabilidade temporal e topológica.</li>
+        <li>Diferenciação textual gritante.</li>
+        <li>Inicialização da nuvem brasileira de dados ligados de participação social.</li>
+        <li>Versinus: um método para (áudio)visualização de redes em evolução temporal.</li>
+        <li>Desenvolvimento de software.</li>
+    </ul>
+       <p class="pnumber">15</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="33000" data-y="-1500">
+    <h1>Estabilidade temporal de atividade e topológica</h1>
+    <br/>
+    <ul class="ul1" style="font-size:60%">
+        <li>Estatísticas circulares mantiveram-se as mesmas para as listas de email, nas escalas de segundos a semestres.</li>
+        <li>Frações fixas de participantes em cada setor de Erdös, em concordância com a literatura.</li>
+        <li>Estabilidade das componentes principais (PCA).</li>
+        <li>Tipologia humana dos setores de Erdös.</li>
+    </ul>
+       <p class="pnumber">16</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="500">
+    <h1>Estabilidade temporal e topológica</h1>
+    <br/>
+        <img src="/assets/InText-WLAU-S1000__.png" height=300>
+       <p class="pnumber">17</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="-3500">
+    <h1>Estabilidade temporal e topológica</h1>
+    <p><br/></p>
+        <img src="/assets/pca.png" height=400>
+       <p class="pnumber">18</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="2500">
+    <h1>Estabilidade temporal e topológica</h1>
+    <br/>
+        <img src="/assets/circularStats.png" height=250>
+       <p class="pnumber">19</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="35000" data-y="4500">
+    <h1>Estabilidade temporal e topológica</h1>
+        <img src="/assets/tableTime.png" height=450>
+       <p class="pnumber">20</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="37000" data-y="-1500">
+    <h1>Diferenciação linguística</h1>
+    <p><br/></p>
+    <ul class="ul1" style="font-size:60%">
+        <li>The texts produced by each of the Erdös sectors are extremely
+        different. The differences found are greater than between
+        different networks or between the same sector of different
+        networks.</li>
+        <li>The differences are sometimes evident: hubs use smaller words, sentences and messages. Peripherals
+        use more nouns and less adjectives.</li>
+        <li>Correlations of topological and textual measurements do not present trivial patterns.</li>
+        <li>Principal components are mainly of textual or topological
+        metrics; the merge of these different sets of metrics is modest.</li>
+        <li>Persistence of the differences in incident and existent
+        words.</li>
+    </ul>
+       <p class="pnumber">21</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="39000" data-y="-1500">
+    <h1>Diferenciação linguística</h1>
+        <img src="/assets/textDiff.png" height=500>
+       <p class="pnumber">22</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="39000" data-y="500">
+    <h1>Diferenciação linguística</h1>
+    <p><br/></p>
+        <img src="/assets/textDiffSents.png" height=350>
+        <img src="/assets/textDiffPOS.png" height=350>
+       <p class="pnumber">23</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="41000" data-y="-1500"></p>
+    <h1>Audiovisualização com Versinus</h1>
+    <p><br/></p>
+    <iframe height="50%" width="50%"
+    src="https://www.youtube.com/embed/1EOnEVmqmmc">
+    </iframe>
+    <p>No Versinus (Latim versus+sinus meaning line+sinusoid),
+    os setores de Erdös são posicionados nos meio-perídos da senóide
+    e na reta superior. O tamanho dos vértices correspondem às forças de entrada
+    e saída. A cor reflete o coeficiente de clusterização.
+    A música é sintetizada utilizando a força total dos 4 hubs mais ativos.
+       <p class="pnumber">24</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="43000" data-y="-1500">
+    <h1>Linked social data</h1>
+    <p><br/></p>
+    <ul class="ul1" style="font-size:60%">
+        <li>Formalização de ontologias (OWL) e vocabulários (SKOS) 
+        de estruturas sociais. OPS, OPA, OPP, Ontologiaa, OCD, OBS,
+        VBS.</li>
+        <li>Scripts Python para tradução de dados relacionais para RDF.</li>
+        <li>Método de síntese de ontologias orientado aos dados.</li>
+    </ul>
+    <p><br/></p>
+        <img src="/assets/obsPNPS_mesam.png" height=200>
+       <p class="pnumber">25</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="45000" data-y="-1500">
+    <h1>Arte e mapeamentos sensoriais</h1>
+    <p><br/></p>
+    <ul class="ul1" style="font-size:60%">
+        <li>Four hubs dance. Social prelude.</li>
+        <li>Versinus.</li>
+        <li>Other pieces: online app (PHP+Python) for rendering email
+        related images and measurements. Sonifications.</li>
+        <li>Apresentações artísticas: crânio sonante, freakcoding.</li>
+    </ul>
+       <p class="pnumber">26</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="47000" data-y="-1500">
+    <h1>Software</h1>
+    <p><br/></p>
+    <p>Official Python packages (PyPI) for precise and efficient sharing
+    of the developments:</p>
+    <ul class="ul1">
+        <li>Observation of circular measurements, topological stability
+        and textual differentiation. The Percolation package.</li>
+        <li>Routines for representing as RDF the relational data from
+        the social participation portals ParticipaBR, Cidade Democrática
+        and AA. The Participation package.</li>
+        <li>Routines for representing as RDF the relational data from
+        the social networking portals/protocols Facebook, Twitter and
+        IRC. The Social package.</li>
+        <li>Routines for representing as RDF the relational data from
+        email lists in the Gmane database. The Gmane package.</li>
+        <li>Routines rendering music and data sonification. The Music package.</li>
+    </ul>
+       <p class="pnumber">27</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="49000" data-y="-1500">
+    <h1>Conclusões</h1>
+    <p><br/></p>
+    <ul class="ul1">
+        <li>Entendemos que a estabilidade das redes de interação humana estão
+          melhor quantificadas e qualificadas através da invariância da fração
+          de participantes em cada setor, da dispersão pequena das componentes principais
+          e das estatísticas circulares.</li>
+        <li>A linguagem apresentada por cada setor é bastante diferente.
+          Em alguns casos, é fácil verificar estas diferenças na leitura direta dos textos.</li>
+        <li>Legado em dados, ontologias e software.</li>
+        <li>Tipologias derivadas das análises.</li>
+        <li>Muitas possibilidades para passos seguintes:
+          inclusão de medidas relacionadas ao TF-IDF, análise de sentimento,
+          inclusão de outras medidas de texto e topologia, analítica (áudio)visual.</li>
+    </ul>
+       <p class="pnumber">28</p> 
+    </div>
+
+    <div class="step verticalLine" data-x="51000" data-y="-1500">
+    <h1>Bibliography</h1>
+    <p><br/></p>
+    <ul class="ul1">
+        <li>BIRD, C. et al. Mining email social networks. In:
+        INTERNATIONAL WORKSHOP ON MINING SOFTWARE REPOSITORIES. 2006,
+        Shanghai. Proceedings… New York: ACM. p. 137–143, 2006.</li>
+        <li>NEWMAN, M. Networks: an introduction. Oxford: Oxford
+        University Press, 2010.</li>
+        <li>COSTA, L. F. et al. Characterization of complex networks: a
+        survey of measurements. Advances in Physics, v. 56, n. 1, p.
+        167–242, 2007.</li>
+        <li>BIRD, S.; KLEIN, E.; LOPER, E. Natural language processing
+        with Python: analyzing text with the natural language toolkit.
+        Beijing: O'Reilly, 2009.</li>
+        <li>BECK, F. et al. A taxonomy and survey of dynamic graph
+        visualization. 2016.</li>
+        <li>BERNERS-LEE, T. Linked data. 2006.</li>
+    </ul>
+       <p class="pnumber">29</p> 
+    </div>
+
+
+    <div class="step verticalLine" data-x="23000" data-y="-1500"
+    data-z="10000" 
+    data-scale="4" data-rotate-x="-90" data-rotate-y="90"
+    data-rotate-z="30">
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <h1 style="text-align:center">Obrigado!</h1>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+    <p><br/></p>
+        <img class="frontimage" style="background: white" src="/assets/icmc.png">
+        <img class="frontimage" src="/assets/fapesp.jpg">
+    </div>
+</div>
+<script src="/assets/impress.js"></script>
+<script>impress().init();</script>
+</body>
+
+</html>
