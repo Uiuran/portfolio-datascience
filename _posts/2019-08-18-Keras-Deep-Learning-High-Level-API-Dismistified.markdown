@@ -5,7 +5,8 @@ categories: keras tensorflow deeplearning
 comments: true
 published: true
 ---
-# [Keras Internals][kerasurl]: Hacking the Most Popular High Level Deep Learning API (PART I - Crash Overview) ***
+# [Keras Internals][kerasurl]: Hacking the Most Popular High Level Deep Learning API***
+# PART I - Crash Overview
 
 Although [Google's TensorFlow][tensorflowurl] is recognized between [one of many][dllibs], it's python High Level API Keras still the most popular python module to products and research in Deep Neural Networks. It emboddies simplicity in the use and allows the user fast access to the elements AI/Deep Neural Networks Research, paving the way to the popularization of Neural Network modelling.
 
