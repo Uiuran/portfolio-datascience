@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Keras Internals: Deep Learning High Level API Dismistifyied 28/07/2019"
+title:  "# [Keras Internals][kerasurl]: Hacking the Most Popular High Level Deep Learning API***"
 categories: keras tensorflow deeplearning
 comments: true
 published: true
@@ -14,7 +14,6 @@ This post is an intended guide to hack/uncover python APIs designed for high lev
 
 ## Keras File Tree
 |![keras file tree](/assets/kerasfiletree.png)|
-|:--:| 
 | *Keras File Tree is an example of well organized Open Source Python Software based on another lib* |
 
 In the representation given above we purposely surpress some of the Keras modules parts such: datasets, preprocessing and applications. A brief overview inside the keras folders evidence the importance of **backend**, **engine** and **layers** modules for Keras and model building.
