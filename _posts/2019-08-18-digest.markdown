@@ -16,7 +16,10 @@ A small digest this week, time to develop in between those news ... May the Forc
 
 - ### [Build Custom Optimizers in Tensorflow - KdNuggets Blog][customoptm]
 
+- ### [Group Convolutions: Convolutions Explained by Group Thery - Google's Brain Colah Blog][colah]
+
 [federatednips2019]: http://federated-learning.org/fl-neurips-2019/
 [cnnshiftinvar]: https://richzhang.github.io/antialiased-cnns/
 [inceptionv4]: https://towardsdatascience.com/review-inception-v4-evolved-from-googlenet-merged-with-resnet-idea-image-classification-5e8c339d18bc
 [customoptm]: https://www.kdnuggets.com/2018/01/custom-optimizer-tensorflow.html
+[colah]: http://colah.github.io/posts/2014-12-Groups-Convolution/
