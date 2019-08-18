@@ -3,7 +3,7 @@ layout: post
 title:  "Keras: Deep Learning High Level API Dismistifyied 28/07/2019"
 categories: keras tensorflow deeplearning
 comments: true
-published: false
+published: true
 ---
 # [Keras][kerasurl]: Hacking the Most Popular High Level Deep Learning API (PART I)
 
