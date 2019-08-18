@@ -12,16 +12,18 @@ Although [Google's TensorFlow][tensorflowurl] is recognized between [one of many
 
 This post is an intended guide to hack/uncover python APIs designed for high level scientific computation built up on diverse computing paradigm, in this case the Computational Graph language paradigm.
 
+# Section 2
+
 ## Keras File Tree
-|![keras file tree](/assets/kerasfiletree.png)|
-| *Keras File Tree is an example of well organized Open Source Python Software based on another lib* |
+
+![keras file tree](/assets/kerasfiletree.png)
+|*Keras File Tree is an example of well organized Open Source Python Software based on another lib*|
 
 In the representation given above we purposely surpress some of the Keras modules parts such: datasets, preprocessing and applications. A brief overview inside the keras folders evidence the importance of **backend**, **engine** and **layers** modules for Keras and model building.
 
 ### [Keras Backend: Where it touches TensorFlow's(and others) Backend][kbackend]
 Dont expect to find TensorFlow code in Keras Module other then the Backend, after all this is why it has the name, it has all to do with the organization of the software in its modules:
-- load_backend.py uses backend() to load file tensorflow_backend.py imports all that is needed from low-level TensorFlow python API. From here you already know, that is Tensorflow Low-Level, below this will gonna get te cpp and so on (future post...).
-- Wont spect any other TensorFlow code scattered somewhere else, all the rest of the code is the works of Keras API.
+- load_backend.py uses backend() to load file tensorflow_backend.py imports all that is needed from low-level TensorFlow python API. From here you already know, that is Tensorflow Low-Level, below this will gonna get some python, mostly binding  cpp, c but Tensorflow features APIs in many other langs ( jumping into backend and others APIs maybe for future post...).
   
 ### [Keras Engine: Networks, Graph Nodes and Layers][kengine]
 Here we find the soul of the Keras API: 
