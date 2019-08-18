@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "White Boulder Weekly Digest on Deep Learning AI and Algorithms 18/08/2019"
+categories: deeplearning ai algorithms digest vae gans danijar hinton information graph language bert google generalization semisupervised brain unsupervised rnn graph
+comments: true
+published: true
+---
+
+A small digest this week, time to develop in between those news ... May the Force Be With You !
+
+- ### [On Data Privacy and Federated Learning- NeurIPS 2019][federatednips2019]
+
+- ### [Anti Aliasing Shift Invariant Convolutional Networks][cnnshiftinvar] 
+
+- ### [Inception V4][inceptionv4]
+
+- ### [Build Custom Optimizers in Tensorflow - KdNuggets Blog][customoptm]
+
+[federatednips2019]: http://federated-learning.org/fl-neurips-2019/
+[cnnshiftinvar]: https://richzhang.github.io/antialiased-cnns/
+[inceptionv4]: https://towardsdatascience.com/review-inception-v4-evolved-from-googlenet-merged-with-resnet-idea-image-classification-5e8c339d18bc
+[customoptm]: https://www.kdnuggets.com/2018/01/custom-optimizer-tensorflow.html
