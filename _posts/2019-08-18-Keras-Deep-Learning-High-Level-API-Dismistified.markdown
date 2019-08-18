@@ -12,7 +12,7 @@ Although [Google's TensorFlow][tensorflowurl] is recognized between [one of many
 This post is an intended guide to hack/uncover python APIs designed for high level scientific computation built up on diverse computing paradigm, in this case the Computational Graph language paradigm.
 
 ## Keras File Tree
-![keras file tree](/assets/kerasfiletree.jpeg){: .filetree}
+![keras file tree](/assets/kerasfiletree.jpeg)
 
 [kerasurl]: https://github.com/keras-team/keras 
 [tensorflowurl]: https://github.com/tensorflow
