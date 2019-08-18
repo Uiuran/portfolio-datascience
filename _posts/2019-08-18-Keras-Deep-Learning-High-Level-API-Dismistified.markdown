@@ -23,7 +23,7 @@ Dont expect to find TensorFlow code in Keras Module other then the Backend, afte
 - load_backend.py uses backend() to load file tensorflow_backend.py imports all that is needed from low-level TensorFlow python API. From here you already know, that is Tensorflow Low-Level, below this will gonna get te cpp and so on (future post...).
 - Wont spect any other TensorFlow code scattered somewhere else, all the rest of the code is the works of Keras API.
   
- ### [Keras Engine: Networks, Graph Nodes and Layers][kengine]
+### [Keras Engine: Networks, Graph Nodes and Layers][kengine]
 Here we find the soul of the Keras API: 
 - Layers are the abstraction for trainable objects in a Neural Network, receiving inputs and outputs. It is implemented as specific types of TensorFlow Network parts in the specific layers modules such convolutions (Conv2D parts and so on).
 - Nodes are the structures behind the graphs constructions, each node has a Layer and a bunch of input layers and output layers. So dont confuse Node by a neuron inside a specific Layer to be built in the Comp Graph, such a Conv2D Layer. Rather a Node will be the overall Name Scope composing all the TensorFlow Operations necessary to fully perform a Convolutions Neural Network Layer step(what Keras does is to easy this building of the Graph by defining the Node with appropriated Convolutional Layers operations).
