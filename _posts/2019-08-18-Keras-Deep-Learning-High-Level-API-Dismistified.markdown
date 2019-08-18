@@ -205,4 +205,4 @@ In this stage of the Keras software architecture, using inheritance from Layers 
 [kbase]: https://github.com/keras-team/keras/blob/master/keras/engine/base_layer.py
 [knetworks]: https://github.com/keras-team/keras/blob/master/keras/engine/network.py
 [klayers]: https://github.com/keras-team/keras/blob/master/keras/layers
-[convolutions: https://github.com/keras-team/keras/blob/master/keras/layers/convolutional.py
+[convolutions]: https://github.com/keras-team/keras/blob/master/keras/layers/convolutional.py
