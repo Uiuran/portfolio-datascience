@@ -7,14 +7,12 @@ published: true
 ---
 
 # [Keras Internals: PART I - Crash Overview][kerasurl]
-{:no_toc}
 
 Although [Google's TensorFlow][tensorflowurl] is recognized between [one of many][dllibs], it's python High Level API Keras still the most popular python module to products and research in Deep Neural Networks. It emboddies simplicity in the use and allows the user fast access to the elements AI/Deep Neural Networks Research, paving the way to the popularization of Neural Network modelling.
 
 This post is an intended guide to hack/uncover python APIs designed for high level scientific computation built up on diverse computing paradigm, in this case the Computational Graph language paradigm.
 
 ## Keras File Tree
-{:toc}
 
 ![keras file tree](/assets/kerasfiletree.png)
 |*Keras File Tree is an example of well organized Open Source Python Software based on another lib*|
@@ -22,12 +20,12 @@ This post is an intended guide to hack/uncover python APIs designed for high lev
 In the representation given above we purposely surpress some of the Keras modules parts such: datasets, preprocessing and applications. A brief overview inside the keras folders evidence the importance of **backend**, **engine** and **layers** modules for Keras and model building.
 
 ### [Keras Backend: Where it touches TensorFlow's(and others) Backend][kbackend]
-{:toc}
+
 Dont expect to find TensorFlow code in Keras Module other then the Backend, after all this is why it has the name, it has all to do with the organization of the software in its modules:
 - load_backend.py uses backend() to load file tensorflow_backend.py imports all that is needed from low-level TensorFlow python API. From here you already know, that is Tensorflow Low-Level, below this will gonna get some python, mostly binding  cpp, c but Tensorflow features APIs in many other langs ( jumping into backend and others APIs maybe for future post...).
   
 ### [Keras Engine: Networks, Graph Nodes and Layers][kengine]
-{:toc}
+
 Here we find the soul of the Keras API: 
 - Layers are the abstraction for trainable objects in a Neural Network, receiving inputs and outputs. It is implemented as specific types of TensorFlow Network parts in the specific layers modules such convolutions (Conv2D parts and so on).
 - Nodes are the structures behind the graphs constructions, each node has a Layer and a bunch of input layers and output layers. So dont confuse Node by a neuron inside a specific Layer to be built in the Comp Graph, such a Conv2D Layer. Rather a Node will be the overall Name Scope composing all the TensorFlow Operations necessary to fully perform a Convolutions Neural Network Layer step(what Keras does is to easy this building of the Graph by defining the Node with appropriated Convolutional Layers operations).
@@ -181,7 +179,6 @@ class Network(Layer):
 ...
 ``` 
 ### [Keras Layers: Implement Deep Neural Nets Specific Layered Steps][klayers]
-{:toc}
 
 Since we gotta the TensorFlow operations with the **Backend** and engineered each node part to build the Computational Graph in **Engine**, the specification of the Nodes composition must be given, and it is done as it is in [Conv2D][convolutions]. 
 
@@ -189,14 +186,12 @@ In this stage of the Keras software architecture, using inheritance from Layers 
 
 
 ## Concluding Remarks
-{:toc}
 
 - Keras is a small port, but still very well architected and possibly scalable for a big size AI Machine Learning API. It does separate software architecures that deals with backends from the main engine abstractions, templates and specific implementations. 
 - The division in the architecture, allows for easy debugging as backends changes its versions, possibly growing capabilities, without crashing other parts of the software. Also, it is easy to grow specific math modelling features.
 - Keras follows the pace and the model of TensorFlow APIs development, always seeking for backward compatibility, use of similar features such decorators, legacy code handling and wrappers for specifying lib names.
 
 ## Next Posts
-{:toc}
 
 - In the next parts i plan to detail some of the relevant implementation of the **Engine**, mainly concerning Graph Building. I plan to present some examples on how to hack the API such that you can expand and contribute to Keras too. 
 - More on the supplementary parts of the API will be given as it seems to be needed for the understanding of the API.
