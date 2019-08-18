@@ -185,14 +185,14 @@ In this stage of the Keras software architecture, using inheritance from Layers 
 
 ## Concluding Remarks
 
-- Keras is a small port, but still very well architected and possibly scalable for a big size AI Machine Learning API. Separating software architecures that deals with backends from the main engine abstractions, templates and specific implementations. 
+- Keras is a small port, but still very well architected and possibly scalable for a big size AI Machine Learning API. It does separate software architecures that deals with backends from the main engine abstractions, templates and specific implementations. 
 - The division in the architecture, allows for easy debugging as backends changes its versions, possibly growing capabilities, without crashing other parts of the software. Also, it is easy to grow specific math modelling features.
 - Keras follows the pace and the model of TensorFlow APIs development, always seeking for backward compatibility, use of similar features such decorators, legacy code handling and wrappers for specifying lib names.
 
 ## Next Posts
 
 - In the next parts i plan to detail some of the relevant implementation of the **Engine**, mainly concerning Graph Building. I plan to present some examples on how to hack the API such that you can expand and contribute to Keras too. 
-- More on the supplementary parts of the API will be given as seems to be needed for the understanding of the API.
+- More on the supplementary parts of the API will be given as it seems to be needed for the understanding of the API.
 
 *** Focusing on TensorFlow
 
