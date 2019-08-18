@@ -178,7 +178,7 @@ class Network(Layer):
 ``` 
 ### [Keras Layers: Implement Deep Neural Nets Specific Layered Steps][klayers]
 
-Since we gotta the TensorFlow operations with the **Backend** and engineered each node part to build the Computational Graph in **Engine**, the specification of the Nodes composition must be given, and it is done as it is in [Conv2D][https://github.com/keras-team/keras/blob/master/keras/layers/convolutional.py]. 
+Since we gotta the TensorFlow operations with the **Backend** and engineered each node part to build the Computational Graph in **Engine**, the specification of the Nodes composition must be given, and it is done as it is in [Conv2D][convolutions]. 
 
 In this stage of the Keras software architecture, using inheritance from Layers as abstracts of Model Parts allows to modular expansion of the API with backward compatibility, and using wrappers such ```_Conv2D``` allows to automaticly port legacy code, that is intended to be mainteined since its predict to still be used by alot of modellers. 
 
