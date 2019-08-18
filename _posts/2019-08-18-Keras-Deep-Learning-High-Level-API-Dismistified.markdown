@@ -11,14 +11,9 @@ Although [Google's TensorFlow][tensorflowurl] is recognized between [one of many
 
 This post is an intended guide to hack/uncover python APIs designed for high level scientific computation built up on diverse computing paradigm, in this case the Computational Graph language paradigm.
 
-
-
-## Keras Filetree
-![Keras File Tree](https://github.com/Uiuran/uiuran.github.io/tree/master/assets/kerasfiletree.png)
-
-See figure \ref{Keras File Tree}.
+## Keras File Tree
+![Keras File Tree](/assets/kerasfiletree.png)
 
 [kerasurl]: https://github.com/keras-team/keras 
 [tensorflowurl]: https://github.com/tensorflow
 [dllibs]: https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software#Deep-learning_software_by_name
-[Keras File Tree]: https://github.com/Uiuran/uiuran.github.io/tree/master/assets/kerasfiletree.jpeg
