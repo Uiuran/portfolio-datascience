@@ -6,15 +6,23 @@ comments: true
 published: false
 ---
 
-# [Keras Internals: PART II - The Engine][kerasengine]
+# Keras Internals: PART II - The Engine
 Keras coming with TensorFlow core is essentialy some steps ahead the last Keras from  Keras-Team. 
 The reason for this difference is, probably, the rithmin of TensorFlow core development is much more rapid than its corresponding High Level API, this is also the main reason on Why Keras is developed at the Core of TensorFlow.
-In Part I i gave an overview of the Keras developed by Keras-Team in version 2.2.4, it's structure remains very similar in the Keras 2.3.0 of the TensorFlow 2.0beta Core, however they added a lot more of relevant things, lets take a look in these diffs first.
 
-## Overview of Keras 2.2.4 and Keras TF 2.0beta Core 2.3.0 File Trees
+In [Part I][partI] i gave an overview of the main classes structuring Keras developed by Keras-Team in version 2.2.4. It does remains very similar to Keras 2.3.0 of the TensorFlow 2.0beta Core, however they added a lot more of relevant things.
 
-![keras file tree](/assets/kerasfiletree.png)
-|*Keras File Tree is an example of well organized Open Source Python Software based on another lib*|
+We will first take a look in these differences, starting from __init__.py, them studying the structures of the three class presented so far: Node, Layers, Network
+
+## Overview of [Keras 2.2.4][kerasengine] and [Keras TF 2.0beta Core 2.3.0][tfkerasengine] File Trees
+
+![keras file tree](/assets/engines.png)
+|*Keras 2.2.4 and Keras TF 2.0beta Core 2.3.0 File Trees*|
+
+### __init__.py file
+
+![init](/assets/__init__.png)
+|*Keras 2.2.4 and Keras TF 2.0beta Core 2.3.0 File Trees*|
   
 ### [Keras Engine: Networks, Graph Nodes and Layers][kengine]
 
@@ -33,7 +41,8 @@ Here we find the soul of the Keras API:
 ## Next Posts
 
 [kerasengine]: https://github.com/keras-team/keras/tree/master/keras/engine 
-[tensorflowurl]: https://github.com/tensorflow
+[tfkerasengine]: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/python/keras/engine
+[partI]:https://uiuran.github.io/keras/tensorflow/deeplearning/2019/08/18/Keras-Deep-Learning-High-Level-API-Dismistified.html
 [dllibs]: https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software#Deep-learning_software_by_name
 [kbackend]: https://github.com/keras-team/keras/tree/master/keras/backend
 [tfbackend]: https://github.com/keras-team/keras/blob/master/keras/backend/tensorflow_backend.py
