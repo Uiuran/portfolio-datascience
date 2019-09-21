@@ -40,6 +40,7 @@ Some blogs i would like to share since i discovered it, but iam doing now in her
 - ### [Eloy Arosio Sound Cloud][eloy]
 - ### [Glerm Soares Organismo][glerm]
 - ### [Renato Fabbri][rfabbri]
+- ### [Catahistorias][fabi]
 
 [agi]: https://agi.io/blog/
 [colah]: http://colah.github.io
