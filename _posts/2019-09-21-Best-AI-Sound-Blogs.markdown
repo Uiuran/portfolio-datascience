@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Best DNN/AI/Algorithms Dev Programming Blogs Compilation - So Far ..."
+title:  "Best DNN/AI/Algorithms Dev, and Programming ArtIntel Blogs Compilation - So Far ..."
 categories: deeplearning ai algorithms digest karpathy Danijar lucid colah googleai kdnuggets sound
 comments: true
 published: true
