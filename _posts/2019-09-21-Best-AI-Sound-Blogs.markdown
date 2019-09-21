@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Best DNN/AI/Algorithms Dev, Music and Sound Programming Blogs Compilation - So Far ..."
+title:  "Best DNN/AI/Algorithms Dev Programming Blogs Compilation - So Far ..."
 categories: deeplearning ai algorithms digest karpathy Danijar lucid colah googleai kdnuggets
 comments: true
-published: True
+published: false
 ---
 
 # AI Deep Learning
@@ -41,12 +41,6 @@ Some blogs i would like to share since i discovered it, but iam doing now in her
 - ### [Glerm Soares Organismo][glerm]
 - ### [Renato Fabbri][rfabbri]
 
-# Deep Orgasmating Texts
-
-- ### [Catahistorias][fabi]
-
-** Dont Let It Die **
-
 [agi]: https://agi.io/blog/
 [colah]: http://colah.github.io
 [distill]: https://distill.pub/
@@ -62,6 +56,5 @@ Some blogs i would like to share since i discovered it, but iam doing now in her
 [casper]: https://mlfromscratch.com/
 [luke]: https://lukeoakdenrayner.wordpress.com/research/
 [eloy]: https://soundcloud.com/eloy-ar-sio
-[glerm]; https://soundcloud.com/organismo/tracks
+[glerm]: https://soundcloud.com/organismo/tracks
 [rfabbri]: https://soundcloud.com/le-poste-tche/sets
-[fabi]: https://catahistorias.wordpress.com/
