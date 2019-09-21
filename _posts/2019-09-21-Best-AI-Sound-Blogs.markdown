@@ -35,7 +35,7 @@ Some blogs i would like to share since i discovered it, but iam doing now in her
 - ### [Matt Gauger Blog][mattgauger]
 - ### [Luke Oakden Computer Vision for Medical Diagnosis Blog][luke]
 
-# Inspirationows Music Sources To Keep with AI
+# Inspirationows Music/LifeHistories Sources To Keep with AI
 
 - ### [Eloy Arosio Sound Cloud][eloy]
 - ### [Glerm Soares Organismo][glerm]
@@ -58,3 +58,4 @@ Some blogs i would like to share since i discovered it, but iam doing now in her
 [eloy]: https://soundcloud.com/eloy-ar-sio
 [glerm]: https://soundcloud.com/organismo/tracks
 [rfabbri]: https://soundcloud.com/le-poste-tche/sets
+[fabi]: https://catahistorias.wordpress.com/
