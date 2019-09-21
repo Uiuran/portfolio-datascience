@@ -35,12 +35,12 @@ Some blogs i would like to share since i discovered it, but iam doing now in her
 - ### [Matt Gauger Blog][mattgauger]
 - ### [Luke Oakden Computer Vision for Medical Diagnosis Blog][luke]
 
-# Inspirationows Music/LifeHistories Sources To Keep with AI
+# Inspirationows Music/LifeHistories Sources To Keep with AI, SoundCloud and Texts
 
-- ### [Eloy Arosio Sound Cloud][eloy]
-- ### [Glerm Soares Organismo][glerm]
-- ### [Renato Fabbri][rfabbri]
-- ### [Catahistorias][fabi]
+- ### [Eloy Arosio Music][eloy]
+- ### [Glerm Soares Organismo Music][glerm]
+- ### [Renato Fabbri Music][rfabbri]
+- ### [Catahistorias Histories][fabi]
 
 [agi]: https://agi.io/blog/
 [colah]: http://colah.github.io
