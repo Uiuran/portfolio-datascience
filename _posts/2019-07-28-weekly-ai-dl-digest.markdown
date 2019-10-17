@@ -13,6 +13,7 @@ published: true
 - ### [Chatbot Tutorial Pytorch][chatbot]
 - ### [Deep Unsupervised Learning Berkeley][deepunsup]
 - ### [Tensorflow Class: Tensorboard Hands On][handsontensorboard]
+- ### [Deep Learning and TensorFlow from Scratch][dlscratch]
 - ### [Python 3.8 Release][python38]
 
 [becomeone]: https://blog.floydhub.com/becoming-one-with-the-data/
@@ -24,3 +25,4 @@ published: true
 [deepunsup]: https://sites.google.com/view/berkeley-cs294-158-sp19/home
 [handsontensorboard]: https://www.youtube.com/watch?v=eBbEDRsCmv4&t=1105s
 [python38]: https://docs.python.org/3.8/whatsnew/3.8.html
+[dlscratch]:http://www.deepideas.net/deep-learning-from-scratch-i-computational-graphs/
