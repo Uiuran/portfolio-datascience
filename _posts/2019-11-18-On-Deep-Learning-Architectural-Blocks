@@ -6,3 +6,42 @@ comments: true
 published: false
 ---
 
+# On Deep-Learning Architectural Building Blocks
+
+## Fully Connected or Dense Layers
+
+## Convolutional Layers
+                                                                                             
+## Softmax Layers
+
+## Recurrent Layers
+
+### Long Short Term Memory (LSTM)
+
+## Residual Layers
+
+## Bottlenecks
+
+## Gated Layers
+
+## Attention
+
+## Deep Convolutions
+
+## U-Nets
+
+## ResNets
+
+## Autoencoders 
+
+## Transformers
+
+## Adversarial Networks
+
+## BERT
+
+## Multi-Functional Networks
+
+## Capsules
+
+
