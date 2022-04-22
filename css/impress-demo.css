@@ -739,3 +739,8 @@ td {
     padding:0 15px 0 15px;
 }
 img.latex {margin-top:5px; margin-bottom:-10px;}
+
+.responsive {
+  width: 100%;
+  height: auto;  
+}

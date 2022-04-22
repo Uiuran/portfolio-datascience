@@ -1,0 +1,117 @@
+<h1 id="insiders-cluster">Insiders cluster</h1>
+<h2 id="the-ficticious-enterprise-all-in-one-need-to-know-which-customers-are-giving-more-revenue-what-are-the-groups-of-consume-and-their-indicators-this-project-aims-to-clustering-clients-with-purpose-of-offering-fidelity-program">The (ficticious) enterprise All-in-One need to know which customers are giving more revenue, what are the groups of consume and their indicators. This project aims to clustering clients with purpose of offering fidelity program.</h2>
+<h4 id="this-project-was-made-by-daniel-penalva">This project was made by Daniel Penalva.</h4>
+<h4><a href="https://gitlab.com/datascience-community/pa005_insiders_clustering/-/tree/pa005_daniel_penalva/insiders_clustering/notebooks">The Code</a></h4>
+<h4><a href="https://uiuran.github.io/portfolio-datascience/index.html#one">Back to the portfolio</a></h4>
+<h1 id="1-business-problem">1. Business Problem.</h1>
+<p>All-in-One has provided 1 year of registers of trading, of comsuption and devolution of products. The enterprise wants to know what is the groups of consumption in order to better target the customers with offers, cupoms, gifts and to produce a efficient marketing strategy. One of the programs planned is a fidelity program for the most valuable customers, called Insiders, we need to answer the questions:</p>
+<p><strong>1. Who is the Insiders ?</strong>
+<strong>2. How many are Insiders ?</strong>
+<strong>3. The main characteristic of the insiders.</strong>
+<strong>4. Insiders contribution of the total revenue.</strong>
+5. Expectance of gross-revenue of Insiders for next months.
+6. What are the conditions to be Insiders ?
+7. What are the conditions to be removed from Insiders ?
+8. What is the warranty of the Insiders group outperforms another groups ?
+9. What actions can the market team take ?</p>
+<p>I answer the first 4 of these question in this project.</p>
+<h1 id="2-business-assumptions">2. Business Assumptions.</h1>
+<p>I assume that the cost of the business is not a target variable. That is, the enterprise is not planning to break even yet and is growing, using investment to deal with the cost of having devolutions, gifts, fees and others.</p>
+<h1 id="3-solution-strategy">3. Solution Strategy</h1>
+<p>My strategy to solve this challenge was:</p>
+<p><strong>Step 01. Data Description:</strong></p>
+<p><img src="resources/describe.png" style='width:100%;' alt=""></p>
+<ul>
+<li>Does negative quantities makes sense ?</li>
+<li>Does 0 price makes sense ?</li>
+</ul>
+<p><strong>Step 02. Feature Engineering:</strong></p>
+<ul>
+<li>Assuming the Recency Frequency Monetary model as baseline i derive these 3 features.</li>
+<li>I derive more features that can serve as indicators to the customer performance such:<ul>
+<li>Number of different products.</li>
+<li>Number of purchases.</li>
+<li>Quantity of items.</li>
+<li>Mean ticket.</li>
+<li>Gross Revenue.</li>
+<li>Frequency of buying (total of purchases/time period of buying).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Step 03. Data Filtering:</strong></p>
+<ul>
+<li>I divided between products buyed and devolutions(negative quantity).</li>
+<li>Filtered for positive values of price.</li>
+<li>Filtered stock codes that does not make sense for the business assumptions.</li>
+<li>Filtered outliers, values greater than Inter Quantile Range, that represents buying and devolution at the same day.</li>
+</ul>
+<p><strong>Step 04. Exploratory Data Analysis:</strong></p>
+<p><img src="resources/pairplot.png" style='width:100%;' alt=""></p>
+<ul>
+<li>I use the tool pandas profiling.</li>
+<li>Low Coefficient of Variation, features with low variation in the pairplot for the axis of the other feature are candidates to be filtered out because does not inform well how to cluster the customers.</li>
+<li>We have distributions with a lot of outliers, indicating which scalers to use and to further investigate that feature.</li>
+</ul>
+<p><strong>Step 05. Data Preparation and Embedding Space Exploration:</strong></p>
+<p><img src="resources/umap.png" style='width:100%;' alt=""></p>
+<ul>
+<li>Clustering requires rescaling, i use min max scaler that is according to the view of EDA with outliers.</li>
+<li>Embedding spaces organize data help us get better results in the clustering.</li>
+<li>We test the projection space of PCA, of Uniform Manifold (UMAP) and RandomForest leafs projected with UMAP.</li>
+<li>The third option selected is shown above.</li>
+</ul>
+<p><strong>Step 06. Feature Selection:</strong></p>
+<ul>
+<li>I select the feature according to the EDA, the features with high CV and significant pair plot distribution.</li>
+</ul>
+<p><strong>Step 07. Machine Learning Modelling:</strong></p>
+<ul>
+<li>Four clustering algorithms are tested: K-Means, Gaussian Mixture Models, Hierarchical Clustering and DBSCAN.</li>
+<li>Hierarchical Clustering is selected by silhouette analysis, the clusters shows high separability.</li>
+</ul>
+<p><strong>Step 08. Hyperparameter Fine Tunning:</strong></p>
+<p><img src="resources/silhouette.png" style='width:100%;' alt=""></p>
+<ul>
+<li>To select the number of clusters of the algorithms we plot the silhouette metrics against the number of cluster.</li>
+<li>The higher the metrics more separated and coherent the cluster.</li>
+</ul>
+<p><img src="resources/silhouette2.png" style='width:100%;' alt=""></p>
+<ul>
+<li>Curvature metrics near to 1 indicates a concise cluster, near to 0 indicates mis-classified data with negative silhouette.</li>
+</ul>
+<p><strong>Step 09. Convert Model Performance to Business Values:</strong></p>
+<p><img src="resources/profile.png" style='width:100%;' alt=""></p>
+<ul>
+<li>The Insiders group (cluster 6) indicates that 8.6 % of the customer base contributes with 53% of the revenue.</li>
+</ul>
+<p><strong>Step 10. Deploy Model to Production:</strong></p>
+<p><img src="resources/deploy.png" style='width:100%;' alt=""></p>
+<ul>
+<li>The model is deployed in a Jupyter Notebook (the case that clustering is evaluated with low frequency, not being necessary to deploy an API with the ETL in a package) in AWS EC2, accessing AWS S3 to get data and pkl scalers and the result is registered in AWS RDS database.</li>
+</ul>
+<h1 id="4-top-data-insights">4. Top Data Insights</h1>
+<p><img src="resources/Customer_Clustering.png" style='width:100%;' alt=""></p>
+<p><strong>Insiders has 10% bigger mean ticket, in relation to Almost Insiders ?</strong></p>
+<ul>
+<li>Insiders mean ticket is 321 % the value of the second group.</li>
+</ul>
+<p><strong>The Insiders group (cluster 6) indicates that 8.6 % of the customer base contributes with 53% of the revenue.</strong></p>
+<h1 id="5-machine-learning-model-applied">5. Machine Learning Model Applied</h1>
+<ul>
+<li>Hierarchical Clustering</li>
+</ul>
+<h1 id="6-conclusions">6. Conclusions</h1>
+<ul>
+<li>To have a fidelity group is of high importance since their customer contributes to great part of the revenue of the enterprise. Segmentation of customers in clusters helps to provide strategy to target customers to increase the fidelity group volume.</li>
+</ul>
+<h1 id="7-lessons-learned">7. Lessons Learned</h1>
+<ul>
+<li>Embedding space of trees is a good strategy to organize the data space and well choosen features can help to explain its efficacy.</li>
+</ul>
+<h1 id="10-next-steps-to-improve">10. Next Steps to Improve</h1>
+<ul>
+<li>Statistical test to determine the interval of values of the features where one customer is considered of the fidelity group or not.</li>
+<li>A/B test to comprove the segmentation is doing a good job.</li>
+</ul>
+<h1 id="license">LICENSE</h1>
+<h1 id="all-rights-reserved---comunidade-ds-2022">All Rights Reserved - Comunidade DS 2022</h1>
