@@ -1,0 +1,87 @@
+<h1 id="health-insurance-cross-sell">Health Insurance Cross Sell</h1>
+<h2 id="the-business-model-of-insurance-enterprise-have-clients-which-can-be-offered-a-an-extra-product-in-a-modality-of-business-called-cross-sell-here-our-project-predict-the-customer-with-highest-probability-of-having-interest-in-the-product-so-the-business-squad-can-have-this-as-decision-parameter-on-which-clients-of-the-client-base-to-offer-the-new-product">The business model of insurance enterprise have clients which can be offered [[A an extra product in a modality of business called Cross Sell. Here our project predict the customer with highest probability of having interest in the product, so the business squad can have this as decision parameter on which clients of the client base to offer the new product.</h2>
+<h4 id="this-project-was-made-by-daniel-penalva">This project was made by Daniel Penalva.</h4>
+<h4><a href="https://gitlab.com/Penalvad/health-insurance-cross-sell/-/tree/master/healthinsurance">The Code</a></h4>
+<h4><a href="https://uiuran.github.io/portfolio-datascience/index.html#one">Back to Portfolio</a></h4>
+<h1 id="1-business-problem">1. Business Problem.</h1>
+<h1 id="2-business-assumptions">2. Business Assumptions.</h1>
+<p>I assume there will be offered the new product to only a small percentage of the base, lowering the cost of acquisition of the new plan. To do that we need to order the base according to the probability of customers acquiring the new product.</p>
+<h1 id="3-solution-strategy">3. Solution Strategy</h1>
+<p>My strategy to solve this challenge was:</p>
+<p><strong>Step 01. Data Description:</strong></p>
+<ul>
+<li>I collected the data from postgresql database and joined all relevant table in one.</li>
+<li>Describe the location, variety and counting metrics of features: previously insured, age, response, region_code, driving license, policy sales and gender.</li>
+</ul>
+<p><strong>Step 02. Feature Engineering:</strong></p>
+<ul>
+<li>No feature engineering was performed for this dataset.</li>
+</ul>
+<p><strong>Step 03. Data Filtering:</strong></p>
+<ul>
+<li>Filtering also was not necessary in this project.</li>
+</ul>
+<p><strong>Step 04. Exploratory Data Analysis:</strong></p>
+<ul>
+<li>I plotted the boxplot, barplot and also histogram of features such age, gender, annual premium against the response, aiming to see how they differently behave regarding the response target.</li>
+</ul>
+<p><strong>Step 05. Data Preparation:</strong></p>
+<ul>
+<li>I divide the dataset in train and test, to perform the transformations according to the train and reserve the test to the final test of the models.</li>
+<li>Used feature scaling necessary to the algorithms that use distances or fit features weight to work well.</li>
+<li>Used Robust Scaler for features with outliers and Standart Scaler for features with near normal distribution.</li>
+<li>Used Frequency Scaler for some categorial variables.</li>
+</ul>
+<p><strong>Step 06. Feature Selection:</strong></p>
+<ul>
+<li>I Performed an Extra Trees fit with 1000 tree estimators, reading the feature importance of each feature in the model.</li>
+<li>Selecting only features with at minimum of 5 % of importance</li>
+<li>Features selected : &#39;vintage&#39;,&#39;annual_premium&#39;,&#39;age&#39;,&#39;region_code&#39;,&#39;vehicle_damage&#39;,&#39;policy_sales_channel&#39;,&#39;previously_insured&#39;</li>
+</ul>
+<p><strong>Step 07. Machine Learning Modelling:</strong></p>
+<ul>
+<li>I fitted K Nearest Neighbors, Logistic Regression and Gradient Boosting models, plotted the lift and gain curves to access the model efficacy.</li>
+</ul>
+<p><img src="resources/gain.png" style='width:100%;' alt=""></p>
+<p><img src="resources/lift.png" style='width:100%;' alt=""></p>
+<p><strong>Step 08. Hyperparameter Fine Tunning:</strong></p>
+<ul>
+<li>I performed cross validation on 4 algorithms, and plotted the metrics of top k precision and top k recall.</li>
+</ul>
+<p><img src="resources/precision_recall.png" style='width:100%;' alt=""></p>
+<ul>
+<li>The Gradient Boosting algorithm with 50 steps estimators and tree depth of 4 outperformed the others.</li>
+</ul>
+<p><strong>Step 09. Convert Model Performance to Business Values:</strong></p>
+<ul>
+<li>I divided the performance the model per buckets and counted the number of customers per bucket.</li>
+<li>We infer a cost of acquisition and a minimal revenue and plotted the total revenue against the ordered base (ROI Curve).</li>
+</ul>
+<p><img src="resources/roi.png" style='width:100%;' alt=""></p>
+<p><strong>Step 10. Deploy Modelo to Production:</strong></p>
+<ul>
+<li>I done a class containing the ETL from data cleaning to prediction, implemented an API in Flask and deployed the model to Heroku.</li>
+<li>Made a google sheets script to access the API from a google sheets and give the ordered result of the prediction.</li>
+</ul>
+<h1 id="4-top-3-data-insights">4. Top 3 Data Insights</h1>
+<p><strong>Hypothesis 01:</strong></p>
+<ul>
+<li>99 % of previously insured customers dont wanna a new insurance of car, this could bias the model but in the feature selection we discovered that this feature is the last in importance.</li>
+</ul>
+<p><strong>Hypothesis 02:</strong></p>
+<p>There are few regions code of higher interest in car secure than the others.</p>
+<h1 id="5-machine-learning-model-applied">5. Machine Learning Model Applied</h1>
+<ul>
+<li>I applied the Gradient Boosting with 4 depth and 50 estimators in the production set.</li>
+</ul>
+<h1 id="6-business-results">6. Business Results</h1>
+<ul>
+<li>With 40% of the base ordered the lift would be of approximate 200% and the revenue will be greater according to the ROI curve.</li>
+<li>We have API that can communicate with any application. In this project we tested the Google Sheets, where the easy of use would potentiallize the results.</li>
+</ul>
+<h1 id="7-lessons-learned">7. Lessons Learned</h1>
+<ul>
+<li>A good ETL with easy to use API, for model the order of importance of a base of customer, turn out to be profitable for the business and is a good Data Science product.</li>
+</ul>
+<h1 id="license">LICENSE</h1>
+<h1 id="all-rights-reserved---comunidade-ds-2022">All Rights Reserved - Comunidade DS 2022</h1>
