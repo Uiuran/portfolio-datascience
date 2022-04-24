@@ -11,6 +11,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+		(function() {
+				// https://dashboard.emailjs.com/admin/account
+				emailjs.init('service_u8pv00r');
+		})();
+</script>
+<script type="text/javascript">
+		window.onload = function() {
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+						event.preventDefault();
+						// generate a five digit number for the contact_number variable
+						this.contact_number.value = Math.random() * 100000 | 0;
+						// these IDs from the previous steps
+						emailjs.sendForm('contact_service', 'contact_form', this)
+								.then(function() {
+										console.log('SUCCESS!');
+								}, function(error) {
+										console.log('FAILED...', error);
+								});
+				});
+		}
+</script>
 	</head>
 	<body class="is-preload">
 
@@ -143,7 +166,7 @@
 						<div class="inner">
 							<h2>Get in touch</h2>
 							<div class="split style1">
-								<section>
+								<section id="contact-form">
 									<form method="post" action="#">
 										<div class="fields">
 											<div class="field half">
@@ -160,12 +183,12 @@
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="dkajah@gmail.com" class="button submit">Send Message</a></li>
+											<li><input type="submit" class="button submit" value="Send Message"></li>
 										</ul>
 									</form>
 								</section>
 								<section>
-									<ul class="contact">
+									<ul class="contact">Location
 										<li>
 											<h3>Address</h3>
 											<span>Rua 2 Pereque Açu<br />
