@@ -1,0 +1,50 @@
+<h1 id="rossmann-drug-retailer-6-weeks-sales-prediction">Rossmann drug retailer 6 weeks sales prediction</h1>
+<p>Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Rossmann store
+managers are tasked with predicting their daily sales for up to six weeks in advance. Store sales are
+influenced by many factors, including promotions, competition, school and state holidays, season-
+ality, and locality. With thousands of individual managers predicting sales based on their unique
+circumstances, the accuracy of results can be quite varied.</p>
+<h1 id="steps-in-solving-the-problem">Steps in solving the problem</h1>
+<h2 id="feature-description-and-filling-up-the-missing-values">Feature Description and Filling-up the missing values</h2>
+<p>First step is to describe features and deal with missing values. Percentage of missing values in the dataset:</p>
+<p><img src="resources/description.png" alt=""></p>
+<h2 id="feature-filtering-and-engineering">Feature filtering and engineering</h2>
+<ul>
+<li>I filtered out registers where stores were not open or sales are 0.</li>
+</ul>
+<h2 id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<h3 id="sales-by-type-of-store">Sales by type of store</h3>
+<ul>
+<li>It&#39;s possible to observe that stores with extended assortment sell more, this result is pronounced for store type b.</li>
+</ul>
+<p><img src="resources/assortment.png" alt=""></p>
+<h3 id="sales-by-type-of-holiday">Sales by type of holiday</h3>
+<ul>
+<li>I observe that we have more sales at easter holiday.</li>
+</ul>
+<p><img src="resources/holiday.png" alt=""></p>
+<h3 id="sales-negatively-correlates-with-distance">Sales negatively correlates with distance</h3>
+<ul>
+<li>It&#39;s possible to observe that sales decrease with competitors distance to the store.</li>
+</ul>
+<p><img src="resources/competition_distance.png" alt=""></p>
+<h3 id="sales-are-lower-with-extended-promotions-than-with-promotions-only">Sales are lower with extended promotions than with promotions only</h3>
+<p><img src="resources/promo.png" alt=""></p>
+<h2 id="encoding-categorical-features-and-re-scaling-features-according-to-eda-">Encoding categorical features and re-scaling features according to EDA.</h2>
+<ul>
+<li>I use min max scaler and robust scaler, according to the number of outliers in each feature</li>
+<li>I apply the log scale to the target Sales, so it has a normal distribution.</li>
+</ul>
+<h2 id="apply-feature-selection-algorithm-boruta-to-select-most-relevant-features-">Apply feature selection algorithm Boruta to select most relevant features.</h2>
+<h2 id="train-test-split-and-apply-the-metrics-for-baseline-models-mean-and-linear-regression-">Train Test Split and apply the metrics for baseline models (mean and linear regression)</h2>
+<ul>
+<li>I apply the mean absolute error MAE and the mean absolute percentage error MAPE to the predictions of 6 weeks.</li>
+<li>Baseline model mean has a MAPE of 30 % and mean has a mape of 22 %</li>
+</ul>
+<h2 id="apply-cross-validation-to-the-random-forest-and-gradient-boost-regressors-">Apply Cross Validation to the Random Forest and Gradient Boost Regressors.</h2>
+<h2 id="evaluate-the-value-of-the-profit-for-the-best-case-scenario-and-worst-case-scenario-by-store-">Evaluate the value of the profit for the best case scenario and worst case scenario by store.</h2>
+<ul>
+<li>The total profit, summing all stores is:</li>
+</ul>
+<p><img src="resources/profit.png" alt=""></p>
+<h2 id="implement-etl-in-heroku-platform-to-be-accessible-by-any-means-such-a-bot">Implement ETL in Heroku platform to be accessible by any means such a bot</h2>
